@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Países</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Sua Nacionalidade: <input type="text" name="txtnac" id="txtnac">
+    <input type="button" value="Resultado" onclick="resultado()">
+    <div id="res"></div>
+
+    <script>
+        function resultado() {
+            var pais = document.querySelector('#txtnac')
+            var res = document.querySelector('#res')
+            var pais = pais.value.trim() 
+            res.innerHTML = `<p>Vivendo em ${pais}</p>` 
+
+            if (pais.toLowerCase() === 'Brasil') {
+                res.innerHTML += `<p>Você é <strong>brasileiro</strong>.</p>`
+                console.log('Você é brasileiro')
+            } else {
+                res.innerHTML += `<p>Você é <strong>estrangeiro</strong>.</p>`
+                console.log('Você é estrangeiro')
+            }
+        }
+    </script>
+</body>
+</html>
